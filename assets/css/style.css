@@ -38,15 +38,189 @@ header a {
   font-size: 1.5em;
 }
 
-header a .search {
+header .search {
   position: absolute;
   right: 20px;
 }
 
-header a .search .fa-search {
+header .search a {
+  font-size: .7em;
+}
+
+header .search a .fa-search {
   color: #fff;
   line-height: 48px;
   width: 2em;
+}
+
+/* End Header */
+/* Navigation */
+nav {
+  position: absolute;
+  top: -50px;
+  left: 90px;
+  z-index: 10;
+}
+
+nav::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+nav ul li a {
+  text-align: left;
+  display: inline-block;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  width: 250px;
+  /* -> width sub menu */
+  position: relative;
+}
+
+nav ul li:hover > ul {
+  display: block;
+  /* Display sub menu waktu di hover */
+  background-color: #fff;
+  box-shadow: 0 0 0.325em 0.13em rgba(0, 0, 0, 0.1);
+}
+
+nav ul ul {
+  position: absolute;
+  /* -> Posisi sub menu */
+  top: 100%;
+  background-color: #16a085;
+  display: none;
+  /*  Hide sub menu */
+}
+
+nav ul ul li {
+  position: relative;
+}
+
+nav ul ul li a {
+  color: #16a085;
+}
+
+nav ul ul li a:hover {
+  color: #ffffff;
+  background-color: rgba(22, 160, 133, 0.8);
+}
+
+nav > ul > li {
+  float: left;
+}
+
+nav > ul > li > a {
+  width: auto;
+  /* adjust width menu */
+  padding: 17px 20px 17px 20px;
+}
+
+nav > ul > li > a:hover {
+  color: rgba(22, 160, 133, 0.8);
+  background-color: #ffffff;
+}
+
+nav sup.textUp {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+/* End Navigation */
+/* Left side bar */
+.leftSidebar {
+  margin-top: 1.25em;
+  border-radius: 0.25em;
+  width: 11.125em;
+  margin-right: 1.25em;
+  height: auto;
+}
+
+.leftSidebar .leftSidebar1 {
+  background-color: #ffffff;
+  border: 1px solid #c6c4c4;
+  border-radius: 0.25em;
+  box-shadow: 0 0 0.325em 0.13em rgba(0, 0, 0, 0.1);
+}
+
+.leftSidebar .leftSidebar1 figure {
+  width: 5em;
+  height: auto;
+  background-color: #ffffff;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-top: -2.8125em;
+}
+
+.leftSidebar .leftSidebar1 h3 {
+  font-size: 1em;
+  margin-bottom: 0;
+  color: #16a085;
+}
+
+.leftSidebar .leftSidebar1 h3.name {
+  color: #333333;
+  margin-top: 0.625em;
+}
+
+.leftSidebar .leftSidebar1 h4 {
+  font-size: .85em;
+  margin-top: 0.5em;
+}
+
+.leftSidebar .leftSidebar1 h4.friends {
+  margin-top: 0.3125em;
+}
+
+.leftSidebar .leftSidebar1 h4:last-child {
+  margin-bottom: 0.9375em;
+}
+
+.leftSidebar .leftSidebar1 img {
+  width: 5em;
+  height: auto;
+}
+
+.leftSidebar .leftSidebar1 .bg {
+  border-radius: 0.25em 0.25em 0 0;
+  background-color: #16a085;
+  height: 3.875em;
+}
+
+.leftSidebar .leftSidebar1 hr {
+  display: block;
+  height: 0.0625em;
+  border-color: #f5f5f5;
+}
+
+.leftSidebar .leftSidebar2 {
+  margin-top: 20px;
+  background-color: #16a085;
+  border: 1px solid #c6c4c4;
+  border-radius: 4px;
+  box-shadow: 0 0 0.325em 0.13em rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+}
+
+.leftSidebar .leftSidebar2 h3 {
+  font-size: .9em;
+  margin-bottom: 0;
+  color: #fff;
+  float: left;
+  line-height: 30px;
+}
+
+.leftSidebar .leftSidebar2 h4 {
+  color: #16a085;
+  float: right;
+  font-size: .85em;
+  line-height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 1.875em;
+  height: 1.875em;
 }
 
 /*# sourceMappingURL=style.css.map */

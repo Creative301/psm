@@ -30,27 +30,176 @@ img {
 /* Header */
 header {
     height: 50px;
-    background-color: #16a085;
+    background-color: $green1;
     padding: 0 20px;
     a {
     margin: 0;
     color: #fff;
     line-height: 50px;
     font-size: 1.5em;
-        .search {
-            position: absolute;
-            right: 20px;
+    }  
+    
+    .search {
+        position: absolute;
+        right: 20px;
+        a {
+            font-size: .7em;
             .fa-search {
                 color: #fff;
                 line-height: 48px;
                 width: 2em;
             }
-        }
-    }   
+        }           
+    }
 }
+/* End Header */
 
+/* Navigation */
+nav {
+    position: absolute;
+    top: -50px;
+    left: 90px;
+    z-index: 10;    
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    ul {
+        li {
+            a {
+               text-align: left;
+                display: inline-block;
+                color: #fff;
+                padding: 10px 20px;
+                text-decoration: none;
+                width: 250px; /* -> width sub menu */
+                position: relative; 
+            }
+            &:hover > ul {
+                display: block;      /* Display sub menu waktu di hover */
+                background-color: #fff;
+                box-shadow: 0 0 .325em .13em rgba($black1,.1);   
+            }
+        }
+        
+        ul {
+            position: absolute; /* -> Posisi sub menu */
+            top: 100%;
+            background-color: $green1;
+            display: none;       /*  Hide sub menu */    
+            li {
+                position: relative;
+                a {
+                    color: $green1;
+                    &:hover {
+                        color: $white1;
+                        background-color: rgba($green1,.8);
+                    }
+                }
+            }
+        }
+    }
+    > ul > li {
+        float: left;
+        & > a {
+            width: auto;       /* adjust width menu */
+            padding: 17px 20px 17px 20px;    
+            &:hover {
+                color: rgba($green1,.8);
+                background-color: $white1;
+            }
+        }
+    }
+    sup {
+        &.textUp{
+        font-size: 1em;
+        font-weight: 700;            
+        }
+    }
+}
+/* End Navigation */
 
-
+/* Left side bar */
+.leftSidebar {
+    @include margin1();
+    width: 11.125em;
+    margin-right: 1.25em;
+    height: auto;
+    .leftSidebar1 {
+        background-color: $white1;
+        border: 1px solid $grey2;
+        border-radius: 0.25em;
+        box-shadow: 0 0 .325em .13em rgba($black1,.1);
+        figure {
+            width: 5em;
+            height: auto;
+            background-color: $white1;
+            margin: 0 auto;
+            border-radius: 50%;
+            margin-top: -2.8125em;
+        }
+        h3 {
+            font-size: 1em;
+            margin-bottom: 0;
+            color: $green1;
+            &.name {
+                color: $black2;
+                margin-top: 0.625em;
+            }
+        }
+        h4 {
+            font-size: .85em;
+            margin-top: 0.5em;
+            &.friends {
+                margin-top: 0.3125em;
+            }
+            &:last-child {
+                margin-bottom: 0.9375em;
+            }
+        }
+        img {
+            width: 5em;
+            height: auto;
+        }
+        .bg {
+            border-radius: 0.25em 0.25em 0 0;
+            background-color: $green1;
+            height: 3.875em;
+        }
+        hr {
+            display: block;
+            height: 0.0625em;
+            border-color: $grey1;    
+        }
+    }
+    
+    .leftSidebar2 {
+        margin-top: 20px;
+        background-color: #16a085;
+        border: 1px solid #c6c4c4;
+        border-radius: 4px;
+        box-shadow: 0 0 .325em .13em rgba(0,0,0,.1);
+        padding: 15px 20px;    
+        h3 {
+            font-size: .9em;
+            margin-bottom: 0;
+            color: #fff;
+            float: left;
+            line-height: 30px;
+        }
+        h4 {
+            color: #16a085;
+            float: right;
+            font-size: .85em;
+            line-height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 1.875em;
+            height: 1.875em;
+        }
+    }
+}
 
 
 
