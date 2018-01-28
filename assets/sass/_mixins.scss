@@ -2,3 +2,19 @@
     margin-top: 1.25em;
     border-radius: 0.25em;
 }
+
+@mixin shadow() {
+    box-shadow: 0 0 .325em .13em rgba($black1,.1);
+    border-radius: 0.25em; 
+}
+
+@mixin borderEffect() {
+    border: 0.0625em solid $grey2;
+    border-radius: 0.25em; 
+    box-shadow: 0 0 .325em .13em rgba($black1,.1);
+}
+
+@mixin wrapper() {
+    height: 15.1875em;
+    width: 100%;
+}

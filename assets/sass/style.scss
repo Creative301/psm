@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    max-width: 60em;
+    max-width: 64em;
     margin: 0 auto;
     position: relative;
     text-align: center;
@@ -19,6 +19,16 @@ body {
 
 img {
     max-width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 0;
+    padding: 0.3125em 0.9375em;
+    border-radius: 0.25em;
+    box-shadow: 0 0 .325em .13em rgba($black1,.1);
+    height: auto;
+    background-color: $white1;
 }
 
 .clearfix {
@@ -123,7 +133,7 @@ nav {
 /* Left side bar */
 .leftSidebar {
     @include margin1();
-    width: 11.125em;
+    width: 13em;
     margin-right: 1.25em;
     height: auto;
     .leftSidebar1 {
@@ -175,28 +185,265 @@ nav {
     }
     
     .leftSidebar2 {
-        margin-top: 20px;
-        background-color: #16a085;
-        border: 1px solid #c6c4c4;
-        border-radius: 4px;
-        box-shadow: 0 0 .325em .13em rgba(0,0,0,.1);
-        padding: 15px 20px;    
+        margin-top: 1.25em;
+        background-color: $green1;
+        border: 0.0625em solid $grey2;
+        border-radius: .25em;
+        box-shadow: 0 0 .325em .13em rgba($black1,.1);
+        padding: 0.9375em 1.25em;    
         h3 {
             font-size: .9em;
             margin-bottom: 0;
-            color: #fff;
+            color: $white1;
             float: left;
             line-height: 30px;
         }
         h4 {
-            color: #16a085;
+            color: $green1;
             float: right;
-            font-size: .85em;
-            line-height: 30px;
-            background-color: #fff;
+            font-size: .7em;
+            line-height: 1.8em;
+            background-color: $white1;
             border-radius: 50%;
             width: 1.875em;
             height: 1.875em;
+        }
+    }
+}
+/* End Left side bar */
+
+/* Status update */
+.status {
+    @include margin1();
+    h4 {
+        text-align: left;
+    }
+    .fa {
+        font-size: .9em;
+    }
+    input[type="text"] {
+        width: 100%;
+        font-size: .8em;
+        height: 2.3em;
+        padding-left: 0.625em;
+        margin: 0.9375em 0;
+    }
+    .form {
+        width: 38em;
+        background-color: $white1;
+        padding: 1.25em;
+        text-align: left;
+        @include borderEffect();
+        height: 9.375em;
+        legend {
+            font-weight: 500;
+        }
+    }
+
+    
+    .bgImg {
+        padding: 1.25em;
+    }
+
+
+/* Status1 */
+.status1, .status2, .status3 {
+    margin-top: 1.25em;
+    width: 38em;
+    text-align: left;
+    @include borderEffect();
+    height: auto;
+    background-color: $white1;
+    .status1Name {
+        margin-top: 1.25em;
+        padding: 0 1.25em;
+        img {
+            float: left;
+            width: 4em;
+            height: auto;
+            border-radius: 50%;
+        }
+        h3 {
+            font-size: 1em;
+            float: left;
+            line-height: 4em;
+            margin-left: 20px;
+        }
+        h4 {
+            font-size: .9em;
+            float: right;
+            line-height: 4.5em;
+        }
+    }
+    p {
+        text-align: justify;
+        padding: 1em 1.25em 0 1.25em;
+    }
+    .bgImg1 {
+        padding: 1.25em 1.25em 0 1.25em;
+    }
+    .like {
+        padding: 0 1.25em 1.25em 1.25em;
+        text-align: center;
+        a {
+            margin: .3em;
+        }
+    }
+}
+/* End Status1 */
+
+}
+/* End Status update */
+
+/* Right side bar */
+.rightSidebar {
+    width: 13em;
+    margin-top: 1.25em;
+    margin-left: 1.25em;
+    height: auto;
+    
+    .rightSidebar1, .rightSidebar2 {
+        padding: 1.25em;
+        background-color: $white1;
+        @include shadow();
+        
+        h4 {
+            padding-top: 0;
+            padding-bottom: 0.375em; 
+        }
+        
+        p {
+            line-height: 1.5em;
+            color: $green1;
+        }
+    }
+    
+    .rightSidebar1 {
+        h4 {
+            color: $green1;
+        }
+        ul {
+            a {
+                font-size: .9em;
+                color: $green1;
+            }
+        }
+    }
+    
+    .rightSidebar2 {
+        margin-top: 1.25em;
+        
+        img {
+            border-radius: 50%;
+            width: 4em;
+            height: auto;
+            margin: 0.625em 0;
+        }
+        
+        ul { 
+            li {
+                display: inline-block;
+            }           
+        }
+        
+        h5 {
+            margin-top: 0.625em;
+            a {
+                color: $black2;
+            }
+        }
+        
+        .fa {
+            margin-top: 0.625em;
+            padding: 0 0.3125em;
+        }
+        
+        .fa-check-circle {
+            color: $green1;
+        }
+        
+        .fa-times-circle {
+            color: $red1;
+        }
+    }
+    
+    .rightSidebar3 {
+        margin-top: 1.25em;
+        padding: 1.8em 1.25em;
+        background-color: $white1;
+        @include shadow();
+        
+        a {
+            color: $black2;
+        }
+    }
+}
+/* End Right side bar */
+
+footer {
+    margin-top: 3em;
+    height: 3em;
+    line-height: 3em;
+    color: $white1;
+    text-align: center;
+    background-color: $green1;
+    
+}
+
+@media screen and (min-width: 769px) {
+    .bgImg {
+        .wrapper1 {
+            @include wrapper();
+            background: url(../images/beach.jpg) no-repeat center;
+            background-size: cover;
+        }
+        .wrapper2 {
+            @include wrapper();
+            background: url(../images/cliff.jpg) no-repeat center;
+            background-size: cover;
+        }      
+    } 
+} 
+/* End 769px */
+
+@media screen and (max-width: 768px) { 
+    .status {
+        .form {
+            width: 100%;
+        }
+    }
+    
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .leftSidebar, .form, .status1, .status2, .status3, .rightSidebar, .rightSidebar1, .rightSidebar2, .rightSidebar3 {
+        width: 100%;
+    }
+    
+    .leftSidebar {
+        order: 3;
+        margin-right: 0;
+    }
+    
+    .rightSidebar {
+        order: 1;
+        margin-left: 0;
+    }
+    
+    .bgImg {
+        .wrapper1, .wrapper2 {
+            height: 15.1875em;
+            background-size: cover;
+        }
+        
+        .wrapper1 {
+            background: url(../images/beach80%25%20.jpg) no-repeat center;           
+        }
+        
+        .wrapper2 {
+            background: url(../images/ciff80%25%20.jpg) no-repeat center;           
         }
     }
 }
@@ -229,17 +476,4 @@ nav {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+;
