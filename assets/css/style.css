@@ -143,7 +143,6 @@ nav sup.textUp {
 .leftSidebar {
   margin-top: 1.25em;
   border-radius: 0.25em;
-  width: 13em;
   margin-right: 1.25em;
   height: auto;
 }
@@ -165,6 +164,7 @@ nav sup.textUp {
 }
 
 .leftSidebar .leftSidebar1 h3 {
+  padding: 0 1.5em 0 1.5em;
   font-size: 1em;
   margin-bottom: 0;
   color: #16a085;
@@ -177,7 +177,7 @@ nav sup.textUp {
 
 .leftSidebar .leftSidebar1 h4 {
   font-size: .85em;
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 
 .leftSidebar .leftSidebar1 h4.friends {
@@ -259,7 +259,6 @@ nav sup.textUp {
 }
 
 .status .form {
-  width: 38em;
   background-color: #ffffff;
   padding: 1.25em;
   text-align: left;
@@ -279,7 +278,6 @@ nav sup.textUp {
 
 .status .status1, .status .status2, .status .status3 {
   margin-top: 1.25em;
-  width: 38em;
   text-align: left;
   border: 0.0625em solid #c6c4c4;
   border-radius: 0.25em;
@@ -334,14 +332,13 @@ nav sup.textUp {
 /* End Status update */
 /* Right side bar */
 .rightSidebar {
-  width: 13em;
   margin-top: 1.25em;
   margin-left: 1.25em;
   height: auto;
 }
 
 .rightSidebar .rightSidebar1, .rightSidebar .rightSidebar2 {
-  padding: 1.25em;
+  padding: 1.5em 2.5em;
   background-color: #ffffff;
   box-shadow: 0 0 0.325em 0.13em rgba(0, 0, 0, 0.1);
   border-radius: 0.25em;
@@ -448,7 +445,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
   }
-  .leftSidebar, .form, .status1, .status2, .status3, .rightSidebar, .rightSidebar1, .rightSidebar2, .rightSidebar3 {
+  .leftSidebar, .status1, .status2, .status3, .rightSidebar, .rightSidebar1, .rightSidebar2, .rightSidebar3 {
     width: 100%;
   }
   .leftSidebar {
