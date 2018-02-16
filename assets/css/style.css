@@ -30,6 +30,7 @@ a {
   box-shadow: 0 0 0.325em 0.13em rgba(0, 0, 0, 0.1);
   height: auto;
   background-color: #ffffff;
+  transition: background-color .5s;
 }
 
 .btn:hover {
@@ -62,7 +63,7 @@ header .search {
 }
 
 header .search a {
-  font-size: .7em;
+  font-size: .8em;
 }
 
 header .search a .fa-search {
@@ -76,7 +77,7 @@ header .search a .fa-search {
 nav {
   position: absolute;
   top: -50px;
-  left: 90px;
+  right: 50px;
   z-index: 10;
 }
 
@@ -84,6 +85,10 @@ nav::after {
   content: '';
   display: block;
   clear: both;
+}
+
+nav ul li {
+  transition: background-color .5s;
 }
 
 nav ul li a {
@@ -141,8 +146,69 @@ nav > ul > li > a:hover {
   background-color: #ffffff;
 }
 
+nav li:hover > ul.drop-menu.menu-1 {
+  perspective: 1000px;
+}
+
+nav li:hover > ul.drop-menu.menu-1 li {
+  opacity: 0;
+}
+
+nav li:hover > ul.drop-menu.menu-1 li:nth-child(1) {
+  animation-name: menu1;
+  animation-duration: 250ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+nav li:hover > ul.drop-menu.menu-1 li:nth-child(2) {
+  animation-name: menu1;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+nav li:hover > ul.drop-menu.menu-1 li:nth-child(3) {
+  animation-name: menu1;
+  animation-duration: 750ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+nav li:hover > ul.drop-menu.menu-1 li:nth-child(4) {
+  animation-name: menu1;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+nav li:hover > ul.drop-menu.menu-1 li:nth-child(5) {
+  animation-name: menu1;
+  animation-duration: 1250ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+nav li:hover > ul.drop-menu.menu-1 li:nth-child(6) {
+  animation-name: menu1;
+  animation-duration: 1500ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menu1 {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) translateY(0px);
+  }
+}
+
 nav sup.textUp {
-  font-size: 1em;
+  font-size: .8em;
   font-weight: 700;
 }
 
@@ -498,6 +564,15 @@ footer {
   }
   .bgImg .wrapper2 {
     background: url(../images/ciff80%25%20.jpg) no-repeat center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo {
+    display: none;
+  }
+  nav {
+    left: 1.25em;
   }
 }
 
