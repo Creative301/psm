@@ -18,14 +18,22 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: #333333;
+}
+
 .btn {
   display: inline-block;
   margin-top: 0;
-  padding: 0.3125em 0.9375em;
+  padding: 0.3em 0.9em;
   border-radius: 0.25em;
   box-shadow: 0 0 0.325em 0.13em rgba(0, 0, 0, 0.1);
   height: auto;
   background-color: #ffffff;
+}
+
+.btn:hover {
+  background-color: #16a085;
 }
 
 .clearfix {
@@ -163,6 +171,10 @@ nav sup.textUp {
   margin-top: -2.8125em;
 }
 
+.leftSidebar .leftSidebar1 .title {
+  margin-bottom: 1em;
+}
+
 .leftSidebar .leftSidebar1 h3 {
   padding: 0 1.5em 0 1.5em;
   font-size: 1em;
@@ -246,6 +258,15 @@ nav sup.textUp {
   text-align: left;
 }
 
+.status a {
+  font-size: .9em;
+  padding: .5em;
+}
+
+.status a:hover {
+  color: #ffffff;
+}
+
 .status .fa {
   font-size: .9em;
 }
@@ -273,7 +294,11 @@ nav sup.textUp {
 }
 
 .status .bgImg {
-  padding: 1.25em;
+  padding: 1.25em 1.25em .25em 1.25em;
+}
+
+.status .like {
+  margin-top: 1em;
 }
 
 .status .status1, .status .status2, .status .status3 {
@@ -326,6 +351,7 @@ nav sup.textUp {
 }
 
 .status .status1 .like a, .status .status2 .like a, .status .status3 .like a {
+  font-size: .9em;
   margin: .3em;
 }
 
@@ -440,6 +466,13 @@ footer {
 @media screen and (max-width: 768px) {
   .status .form {
     width: 100%;
+  }
+  .status .form a {
+    font-size: .8em;
+    padding: .5em .8em;
+  }
+  .status p {
+    font-size: .9em;
   }
   .container {
     display: flex;

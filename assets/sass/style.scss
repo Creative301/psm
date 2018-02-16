@@ -21,14 +21,21 @@ img {
     max-width: 100%;
 }
 
+a {
+    color: $black2;
+}
+
 .btn {
     display: inline-block;
     margin-top: 0;
-    padding: 0.3125em 0.9375em;
+    padding: 0.3em 0.9em;
     border-radius: 0.25em;
     box-shadow: 0 0 .325em .13em rgba($black1,.1);
     height: auto;
     background-color: $white1;
+    &:hover {
+        background-color: $green1;
+    }
 }
 
 .clearfix {
@@ -140,6 +147,7 @@ nav {
         border: 1px solid $grey2;
         border-radius: 0.25em;
         box-shadow: 0 0 .325em .13em rgba($black1,.1);
+        
         figure {
             width: 5em;
             height: auto;
@@ -148,6 +156,11 @@ nav {
             border-radius: 50%;
             margin-top: -2.8125em;
         }
+        
+        .title {
+            margin-bottom: 1em;
+        }
+        
         h3 {
             padding: 0 1.5em 0 1.5em;
             font-size: 1em;
@@ -218,9 +231,17 @@ nav {
     h4 {
         text-align: left;
     }
+    a {
+        font-size: .9em;
+        padding: .5em;
+        &:hover {
+            color: $white1;
+        }
+    }
     .fa {
         font-size: .9em;
     }
+    
     input[type="text"] {
         width: 100%;
         font-size: .8em;
@@ -238,10 +259,13 @@ nav {
             font-weight: 500;
         }
     }
-
     
     .bgImg {
-        padding: 1.25em;
+        padding: 1.25em 1.25em .25em 1.25em;
+    }
+    
+    .like {
+        margin-top: 1em;
     }
 
 
@@ -284,6 +308,7 @@ nav {
         padding: 0 1.25em 1.25em 1.25em;
         text-align: center;
         a {
+            font-size: .9em;
             margin: .3em;
         }
     }
@@ -408,6 +433,15 @@ footer {
     .status {
         .form {
             width: 100%;
+            
+            a {
+                font-size: .8em;
+                padding: .5em .8em;
+            }
+        }
+        
+        p {
+            font-size: .9em;
         }
     }
     
