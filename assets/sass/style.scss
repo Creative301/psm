@@ -59,15 +59,29 @@ header {
     
     .search {
         position: absolute;
-        right: 20px;
+        right: 0.625em;
         a {
             font-size: .8em;
+            transition: background-color .5s;
             .fa-search {
                 color: #fff;
                 line-height: 48px;
                 width: 2em;
             }
         } 
+    }
+    
+    .searchForm {
+        position: absolute;
+        top: 55px;
+        right: 0.3125em;
+        z-index: 10;
+        display: none;
+        input[type="text"] {
+            padding: .5em .6em .5em;    
+            border: 1px solid $green1;
+            font-size: .9em;
+        }       
     }
 }
 /* End Header */
@@ -76,7 +90,7 @@ header {
 nav {
     position: absolute;
     top: -50px;
-    right: 50px;
+    right: 4em;
     z-index: 10;    
     &::after {
         content: '';
@@ -159,7 +173,6 @@ nav {
                 opacity: 1; 
                 transform: rotateY(0deg) translateY(0px);
             }
-
         }
     
     sup {
@@ -205,6 +218,7 @@ nav {
                 margin-top: 0.625em;
             }
         }
+        
         h4 {
             font-size: .85em;
             margin-top: 1em;
@@ -215,15 +229,18 @@ nav {
                 margin-bottom: 0.9375em;
             }
         }
+        
         img {
             width: 5em;
             height: auto;
         }
+        
         .bg {
             border-radius: 0.25em 0.25em 0 0;
             background-color: $green1;
             height: 3.875em;
         }
+        
         hr {
             display: block;
             height: 0.0625em;
@@ -265,6 +282,7 @@ nav {
     h4 {
         text-align: left;
     }
+    
     a {
         font-size: .9em;
         padding: .5em;
@@ -272,6 +290,7 @@ nav {
             color: $white1;
         }
     }
+    
     .fa {
         font-size: .9em;
     }
@@ -283,6 +302,7 @@ nav {
         padding-left: 0.625em;
         margin: 0.9375em 0;
     }
+    
     .form {
         background-color: $white1;
         padding: 1.25em;
@@ -310,6 +330,7 @@ nav {
     @include borderEffect();
     height: auto;
     background-color: $white1;
+    
     .status1Name {
         margin-top: 1.25em;
         padding: 0 1.25em;
@@ -331,13 +352,16 @@ nav {
             line-height: 4.5em;
         }
     }
+    
     p {
         text-align: justify;
         padding: 1em 1.25em 0 1.25em;
     }
+    
     .bgImg1 {
         padding: 1.25em 1.25em 0 1.25em;
     }
+    
     .like {
         padding: 0 1.25em 1.25em 1.25em;
         text-align: center;
@@ -354,7 +378,6 @@ nav {
 
 /* Right side bar */
 .rightSidebar {
-
     margin-top: 1.25em;
     margin-left: 1.25em;
     height: auto;
@@ -438,6 +461,7 @@ nav {
 /* End Right side bar */
 
 footer {
+    font-size: .9em;
     margin-top: 3em;
     height: 3em;
     line-height: 3em;
@@ -454,6 +478,7 @@ footer {
             background: url(../images/beach.jpg) no-repeat center;
             background-size: cover;
         }
+        
         .wrapper2 {
             @include wrapper();
             background: url(../images/cliff.jpg) no-repeat center;
@@ -461,7 +486,7 @@ footer {
         }      
     } 
 } 
-/* End 769px */
+/* End min-width: 769px */
 
 @media screen and (max-width: 768px) { 
     .status {
@@ -509,10 +534,11 @@ footer {
         }
         
         .wrapper2 {
-            background: url(../images/ciff80%25%20.jpg) no-repeat center;           
+            background: url(../images/cliff80%25.jpg) no-repeat center;           
         }
     }
 }
+/* End max-width: 768px  */
 
 
 @media screen and (max-width: 400px) { 
@@ -521,7 +547,7 @@ footer {
     }    
     
     nav {
-        left: 1.25em;  
+        left: 0.625em;
     }
 }
 

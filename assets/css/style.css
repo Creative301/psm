@@ -59,11 +59,12 @@ header a {
 
 header .search {
   position: absolute;
-  right: 20px;
+  right: 0.625em;
 }
 
 header .search a {
   font-size: .8em;
+  transition: background-color .5s;
 }
 
 header .search a .fa-search {
@@ -72,12 +73,26 @@ header .search a .fa-search {
   width: 2em;
 }
 
+header .searchForm {
+  position: absolute;
+  top: 55px;
+  right: 0.3125em;
+  z-index: 10;
+  display: none;
+}
+
+header .searchForm input[type="text"] {
+  padding: .5em .6em .5em;
+  border: 1px solid #16a085;
+  font-size: .9em;
+}
+
 /* End Header */
 /* Navigation */
 nav {
   position: absolute;
   top: -50px;
-  right: 50px;
+  right: 4em;
   z-index: 10;
 }
 
@@ -505,6 +520,7 @@ nav sup.textUp {
 
 /* End Right side bar */
 footer {
+  font-size: .9em;
   margin-top: 3em;
   height: 3em;
   line-height: 3em;
@@ -528,7 +544,7 @@ footer {
   }
 }
 
-/* End 769px */
+/* End min-width: 769px */
 @media screen and (max-width: 768px) {
   .status .form {
     width: 100%;
@@ -563,16 +579,17 @@ footer {
     background: url(../images/beach80%25%20.jpg) no-repeat center;
   }
   .bgImg .wrapper2 {
-    background: url(../images/ciff80%25%20.jpg) no-repeat center;
+    background: url(../images/cliff80%25.jpg) no-repeat center;
   }
 }
 
+/* End max-width: 768px  */
 @media screen and (max-width: 400px) {
   .logo {
     display: none;
   }
   nav {
-    left: 1.25em;
+    left: 0.625em;
   }
 }
 
